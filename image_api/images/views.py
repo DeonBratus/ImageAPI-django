@@ -7,6 +7,9 @@ from django.core.files.base import ContentFile
 from rest_framework.permissions import IsAuthenticated
 from .tasks import image_event_log
 
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
+
 class ImageViewSet(viewsets.ModelViewSet):
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
@@ -16,6 +19,10 @@ class ImageViewSet(viewsets.ModelViewSet):
     
     TARGET_RESOLUTION = (100, 100)
 
+    @swagger_auto_schema(
+            operation_description="CRUD-operation",
+            responses={200: ImageSerializer(many=True)}
+    )
     def perform_create(self, serializer):
 
         image_file = self.request.FILES['image_path']
