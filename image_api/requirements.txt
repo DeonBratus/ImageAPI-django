@@ -1,0 +1,32 @@
+# Django - основной фреймворк для веб-приложения
+Django>=3.2,<4.0
+
+# djangorestframework - для создания REST API
+djangorestframework>=3.12.0
+
+djangorestframework-simplejwt>=5.2
+
+# psycopg2 - драйвер PostgreSQL для Django
+psycopg2-binary>=2.9.1
+
+# Celery - библиотека для асинхронной обработки задач
+celery>=5.2.0
+
+# Kombu - используется Celery для взаимодействия с брокером сообщений
+kombu>=5.2.0
+
+# Pillow - для обработки изображений
+Pillow>=8.3.1
+
+# django-cors-headers - для работы с CORS, если потребуется
+django-cors-headers>=3.10.0
+
+# Дополнительные библиотеки для обработки изображений
+# Например, для минификации изображений
+image==1.5.33
+
+# python-decouple - для удобной работы с переменными окружения
+python-decouple>=3.5
+
+# Pika - альтернатива для работы с RabbitMQ, если используете его напрямую
+pika>=1.2.0

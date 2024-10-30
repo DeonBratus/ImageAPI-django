@@ -1,0 +1,17 @@
+# Dockerfile для Celery
+FROM python:3.10
+
+WORKDIR /app
+
+# Копирование файлов в контейнер
+COPY . /app
+
+# Установка зависимостей
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# Экспорт переменных среды
+ENV PYTHONUNBUFFERED=1
+
+# Запуск Celery воркера
+CMD ["celery", "-A", "image_api", "worker", "--loglevel=info"]
