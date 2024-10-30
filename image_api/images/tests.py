@@ -12,7 +12,7 @@ class ImageAPITest(APITestCase):
     def setUp(self):
         self.client = APIClient()
         # create test user
-        self.user = User.objects.create_user(username='debral', password='12481632')
+        self.user = User.objects.create_user(username='testuser', password='password0000')
 
         # get token and authorization with them
         refresh_token = RefreshToken.for_user(self.user)
