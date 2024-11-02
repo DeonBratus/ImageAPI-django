@@ -66,29 +66,29 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'image_api.wsgi.application'
-# Database_for_local_test
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'images_db',
-        'USER': 'username',
-        'PASSWORD': 'password',
-        'HOST': '127.0.0.1',
-        'PORT': '5432'
-    }
-}
-
-# Database for test in containers
+# # Database_for_local_test
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER': 'postgres',
-#         'PASSWORD': 'postgres',
-#         'HOST': 'db',
+#         'NAME': 'images_db',
+#         'USER': 'username',
+#         'PASSWORD': 'password',
+#         'HOST': '127.0.0.1',
 #         'PORT': '5432'
 #     }
 # }
+
+#Database for test in containers
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
+        'PORT': '5432'
+    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
